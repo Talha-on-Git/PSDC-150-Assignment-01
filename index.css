@@ -1,0 +1,62 @@
+body{
+    background-color: silver;
+    display: flex;
+}
+#logo{
+    width: 35px;
+    height: 35px;
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-right: 2px;
+    rotate: 180px;
+}
+#logoline{
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+}
+aside{
+    width: 190px;
+    height: 90vh;
+    background-color: rgb(219, 218, 218);
+    margin: 20px;
+    border: 1px solid rgb(187, 187, 187);
+    border-radius: 13px; 
+}
+
+    nav{
+    background-color: white;
+    border: 15px solid white;
+    border-radius: 8px;
+    width: 170vh;
+    position: absolute;
+    top: 30px;
+    left: 230px;
+}
+#searchbar{
+    background-color: rgb(235, 235, 235);
+    height: 15px;
+    width: 250px;
+    border-radius: 20px;
+    border: 5px solid  rgb(235, 235, 235);
+    margin-left: 15px;
+    margin-right: 15px;
+}
+#dropdown{
+    appearance: none;
+    background-color: white;
+    border: 2px solid white;
+    padding: 2px 5px;
+    color: rgb(143, 142, 142);
+}
+#dropdown:focus{
+    outline: none;
+    border-color: white;
+}
+#magglass{
+    width: 15px;
+    height: 15px;
+    background-color: rgb(235, 235, 235) ;
+    position: absolute;
+    left: 255px;
+    top: 6px;
+}
