@@ -1,32 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
     <div id="maincont">
-        <header>
-            <nav>
-                <img id="magglass" src="c:\Users\DELL\Downloads\search-icon-256x255-qprtpgwc.png" alt="searchicon" style="background-color: transparent;">
-                <input id="searchbar" type="text" name="searchbar" placeholder="Search">
-                    <select id="dropdown">
-                    <option value="day/date">Wednesday, 1st March</option>
-                    <option value="day/date">Thursday, 2nd March</option>
-                    <option value="day/date">Friday, 3rd March</option>
-                    <option value="day/date">Saturday, 4th March</option>
-                    <option value="day/date">Sunday, 5th March</option>
-                    <option value="day/date">Monday, 6th March</option>
-                    <option value="day/date">Tuesday, 7th March</option>
-                     </select>
-            </nav>
-        </header>
-    <aside>
-        <img id="logo" src="https://cdn-icons-png.flaticon.com/512/51/51464.png" alt="bressicon" title="bress icon">
-        <h3 id="logoline">BRESS</h3>
-    </aside>
+        <aside>
+            <span class="material-icons" id="logo">
+                category
+            </span>
+            <h3 id="logoline">BRESS</h3>
+            <hr id="aside">
+            <ul id="sidelist">
+                <a href="#">
+                    <li class="side"> <span class="material-symbols-outlined listicon">
+                            dashboard
+                        </span>
+                        Dashboard
+                    </li>
+                </a>
+                <a href="#">
+                    <li class="side"><span class="material-symbols-outlined listicon">
+                            pie_chart
+                        </span>
+                        Projects
+                    </li>
+                </a>
+                <div>
+                    <a href="#">
+                        <li class="side" id="taskli"><span class="material-symbols-outlined listicon">
+                                ballot
+                            </span>
+                            Task list
+                        </li>
+                    </a>
+                </div>
+                <a href="#">
+                    <li class="side"><span class="material-symbols-outlined listicon">
+                            layers
+                        </span>
+                        Services
+                    </li>
+                </a>
+                <a href="#">
+                    <li class="side"><span class="material-symbols-outlined listicon">
+                            notifications
+                        </span>
+                        Notifications
+                    </li>
+                </a>
+                <a href="#">
+                    <li class="side"><span class="material-symbols-outlined listicon">
+                            forum
+                        </span>
+                        Chat
+                    </li>
+                </a>
+            </ul>
+            <div id="user">
+                <img src="c:\Users\DELL\Downloads\1711629070011.png" alt="user image" title="user image" id="userimage">
+                <div id="usertext">
+                    <h4 id="name">Talha Yousuf</h4>
+                    <a href="mailto:talhayousuf107@gmail.com" id="emaillink">talhayousuf107@gmail.com</a>
+                </div>
+            </div>
+        </aside>
+        <main>
+            <div class="head">
+                <header>
+                    <nav>
+                        <a href=""><span class="material-symbols-outlined" id="magglass">
+                                search
+                            </span></a>
+                        <form action="/action_page.php" method="get">
+                            <input id="searchbar" type="text" name="searchbar" placeholder="Search">
+                            <select id="dropdownsec1">
+                                <option value="day/date">Wednesday, 1st March</option>
+                                <option value="day/date">Thursday, 2nd March</option>
+                                <option value="day/date">Friday, 3rd March</option>
+                                <option value="day/date">Saturday, 4th March</option>
+                                <option value="day/date">Sunday, 5th March</option>
+                                <option value="day/date">Monday, 6th March</option>
+                                <option value="day/date">Tuesday, 7th March</option>
+                            </select>
+                        </form>
+                        <div class="headbuttondiv">
+                            <button class="button button1">
+                                <span class="material-symbols-outlined buttonicon">
+                                    view_carousel
+                                    </span>Card</button>
+                            <button class="button button2">
+                                <span class="material-symbols-outlined buttonicon">
+                                format_list_bulleted
+                                </span>List</button>
+                        </div>
+                    </nav>
+                </header>
+            </div>
+            <section id="sec1">
+                <header class="tasks-header">
+                    <div id="taskheaddiv">
+                        <h2 id="mainhead">Last tasks</h2>
+                        <p id="tasktext">
+                            <span class="bold">117 total,</span>
+                            <span class="opaque">proceed to resolve them</span>
+                        </p>
+                    </div>
+                    <div id="righthead1">
+                        <h2 class=" rightheadchild1">94</h2>
+                        <p class="rightheadchild2">Done</p>
+                    </div>
+                    <hr id="right-head-line">
+                    <div id="righthead2">
+                        <h2 class=" rightheadchild3">23</h2>
+                        <p class="rightheadchild4">In progress</p>
+                    </div>
+                </header>
+                    <div id="table">
+                        <table>
+                            <!-- This is Header row of table -->
+                            <tr id="rowhead">
+                                <th><input type="checkbox" name="checkbox" class="checkbox"></th>
+                                <th id="tablename">Name</th>
+                                <th>Admin</th>
+                                <th>Members</th>
+                                <th id="status">Status</th>
+                                <th>Run time</th>
+                                <th>Finish date</th>
+                            </tr>
+                            <!-- This is row 1 of Table -->
+                            <tr id="row1">
+                                <td><input type="checkbox" name="checkbox" class="checkbox"></td>
+                                <td>ClientOnboarding-Circle</td>
+                                <td><img src="https://cdn-icons-png.flaticon.com/512/6997/6997662.png" alt="samata"
+                                        class="admin icons" id="samanta">Samanta J.</td>
+                                <td>3</td>
+                                <td>
+                                    <div class="status1"><span class="material-symbols-outlined schedule">
+                                            schedule
+                                        </span>In progress</div>
+                                </td>
+                                <td>6 hours</td>
+                                <td>
+                                    <div class="findate">6 Mon</div>
+                                </td>
+                            </tr>
+                            <!-- This is row 2 of Table -->
+                            <tr id="row2">
+                                <td><input type="checkbox" name="checkbox" class="checkbox"></td>
+                                <td>Meeting with Webflow and Notion</td>
+                                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKvS4Z3oRCkqh5KgquhTEP7OQtjk_KbVX-FQ&usqp=CAU"
+                                        alt="Bob P." class="admin icons" id="Bob">Bob P.</td>
+                                <td>4</td>
+                                <td>
+                                    <div class="status2"><span class="material-symbols-outlined schedule">
+                                            schedule
+                                        </span>Done</div>
+                                </td>
+                                <td>2 hours</td>
+                                <td>
+                                    <div class="findate">7 Tue</div>
+                                </td>
+                            </tr>
+                            <!-- This is row 3 of Table -->
+                            <tr id="row3">
+                                <td><input type="checkbox" name="checkbox" class="checkbox"></td>
+                                <td>First Handoff with Engineers</td>
+                                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo2_z1DN2NYL_iGeUnfBN7T7bpUuGBc0TuWTE6d_j2eR6uUso15z0qFCsQTbCZEcipDz0&usqp=CAU"
+                                        alt="kate O." class="admin icons" id="Kate">Kate O.</td>
+                                <td>10</td>
+                                <td>
+                                    <div class="status1"><span class="material-symbols-outlined schedule">
+                                            schedule
+                                        </span>In progress</div>
+                                </td>
+                                <td>3 days</td>
+                                <td>
+                                    <div class="findate">10 Fri</div>
+                                </td>
+                            </tr>
+                            <!-- This is row 4 of Table -->
+                            <tr id="row4">
+                                <td><input type="checkbox" name="checkbox" class="checkbox"></td>
+                                <td>Client darfting(2) with Lawrence</td>
+                                <td><img src="https://cdn-icons-png.flaticon.com/512/700/700674.png" alt="Jack F."
+                                        class="admin icons" id="jack">Jack F.</td>
+                                <td>7</td>
+                                <td>
+                                    <div class="status1">
+                                        <span class="material-symbols-outlined schedule">
+                                            schedule
+                                        </span>In progress
+                                    </div>
+                                </td>
+                                <td>1 week</td>
+                                <td>
+                                    <div class="findate">19 Sun</div>
+                                </td>
+                            </tr>
+                            <!-- This is row 5 of Table -->
+                            <tr id="row5">
+                                <td><input type="checkbox" name="checkbox" class="checkbox"></td>
+                                <td>Table Assignment</td>
+                                <td><img src="https://cdn-icons-png.flaticon.com/512/700/700674.png" alt="Jack F."
+                                        class="admin icons" id="jack">Tal Y.</td>
+                                <td>1</td>
+                                <td>
+                                    <div class="status2"><span class="material-symbols-outlined schedule">
+                                            schedule
+                                        </span>Done</div>
+                                </td>
+                                <td>2 days</td>
+                                <td>
+                                    <div class="findate">12 Mar</div>
+                                </td>
+                            </tr>
+                            <!-- This is row 6 of Table -->
+                            <tr id="row6">
+                                <td><input type="checkbox" name="checkbox" class="checkbox"></td>
+                                <td>Website Layout</td>
+                                <td><img src="https://cdn-icons-png.flaticon.com/512/700/700674.png" alt="Jack F."
+                                        class="admin icons" id="jack">Tal Y.</td>
+                                <td>1</td>
+                                <td>
+                                    <div class="status1"><span class="material-symbols-outlined schedule">
+                                            schedule
+                                        </span>In progress</div>
+                                </td>
+                                <td>1 week</td>
+                                <td>
+                                    <div class="findate">28 Mar</div>
+                                </td>
+                            </tr>
+                            <!-- This is row 7 of Table -->
+                            <tr id="row7">
+                                <td><input type="checkbox" name="checkbox" class="checkbox"></td>
+                                <td>Webflow Assignment</td>
+                                <td><img src="https://cdn-icons-png.flaticon.com/512/700/700674.png" alt="Jack F."
+                                        class="admin icons" id="jack">Sha Y.</td>
+                                <td>1</td>
+                                <td>
+                                    <div class="status2">
+                                        <span class="material-symbols-outlined schedule">
+                                            schedule
+                                        </span>Done
+                                    </div>
+                                </td>
+                                <td>1.2 weeks</td>
+                                <td>
+                                    <div class="findate">8 Jun</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+            </section>
+            <div id="sectioncolumn">
+            <section id="sec2">
+                <div id="sec2head">
+                    <h4 id="section2-heading">Productivity</h4>
+                    <form action="/action_page.php" method="get">
+                        <select name="dropdownsec2" id="dropdownsec2">
+                            <option value="date/month">01-07 May</option>
+                            <option value="date/month">08-14 May</option>
+                            <option value="date/month">15-21 May</option>
+                            <option value="date/month">22-28 May</option>
+                        </select>
+                    </form>
+                </div>
+                <img src="https://www.freecodecamp.org/news/content/images/2022/09/line-chart-2.png" alt="graph" id="graph">
+            </section>
+           <section id="sec3">
+                <h4 id="section3-heading">Projects in progress</h4>
+            <div id="firstbox">
+                <p id="features">
+                    <span id="feedback">Feedback</span>
+                    <span id="bug">Bug</span>
+                    <span id="design-system">Design System</span>
+                </p>
+                <p id="cardread">Improve cards readability</p>
+                <p id="IP">21.03.22</p>
+                <img src="https://cdn.icon-icons.com/icons2/2643/PNG/512/male_man_people_person_avatar_white_tone_icon_159363.png" alt="icon" id="icon1" class="sec3icons"><img src="https://cdn-icons-png.flaticon.com/512/6997/6997662.png" alt="icon" id="icon2" class="sec3icons"><img src="https://visualpharm.com/assets/924/Timezone%20+8-595b40b85ba036ed117dc87c.svg" alt="icon" id="icon3" class="sec3icons">
+                <p id="comment">
+                    <div id="commentline"><span class="material-symbols-outlined" id="firstboxend1">
+                        comment
+                        </span>12 comments</div>
+                    <div id="filebox" ><span class="material-symbols-outlined" id="firstboxend2">
+                        inventory_2
+                        </span>0 files</div>
+                </p>
+            </div>
+                <div id="secondbox">huh</div>
+                <div id="thirdbox">why</div>
+                <div id="fourthbox">where is it</div>
+                <p>
+                <span class="material-icons" id="sec3arrow">
+                    arrow_circle_right
+                    </span>
+                </p>
+           </section>
+           </div>
+        </main>
     </div>
 </body>
 </html>
