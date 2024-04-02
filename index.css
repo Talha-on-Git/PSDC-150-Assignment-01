@@ -216,10 +216,13 @@ nav {
     border-radius: 8px;
     padding-top: 10px;
     padding-left: 23px;
-    overflow-y: scroll;
+    overflow-y:auto;
     padding-bottom: 3px;
 }
-
+#wrapper{
+overflow-y: scroll;
+height: 100%;
+}
 #mainhead {
     font-family: Arial, Helvetica, sans-serif;
     margin: 14px 0 6px 0;
