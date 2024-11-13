@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UMS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: "rgb(218, 227, 229)",
+              primaryText: "rgb(33, 33, 33)",
+              accent: "rgb(105, 170, 215)",
+              cta: "rgb(35, 150, 127)",
+              highlight: "rgb(244, 96, 54)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg background text-primaryText">
+    <header class="bg-cta text-primaryText p-4 font-bold">
+      <%- include("./partials/navbar.ejs") %>
+    </header>
+    <h1 class="font-bold text-center my-5 text-4xl">
+      Welcome to the User Management System
+    </h1>
+    <a href="/register" class="no-underline">
+      <button class="block mx-auto bg-accent text-primaryText p-3 rounded">
+        Get Registered
+      </button>
+      </a>
+  </body>
+</html>

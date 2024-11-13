@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: "rgb(218, 227, 229)",
+              primaryText: "rgb(33, 33, 33)",
+              accent: "rgb(105, 170, 215)",
+              cta: "rgb(35, 150, 127)",
+              highlight: "rgb(244, 96, 54)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg background text-primaryText">
+    <header class="bg-cta text-primaryText p-4 font-bold">
+      <%- include("./partials/navbar.ejs") %>
+    </header>
+    <main class="p-6 max-w-md mx-auto">
+      <h1 class="text-2xl font-bold mb-4">Register User</h1>
+      <form action="/users" method="post" class="space-y-4">
+        <div>
+          <label for="username" class="block text-lg font-medium"
+            >Username</label
+          >
+          <input
+            type="text"
+            id="username"
+            name="username"
+            class="w-full p-2 border rounded"
+          />
+        </div>
+        <div>
+          <label for="email" class="block text-lg font-medium"
+            >Email</label
+          >
+          <input 
+           type="email" 
+           id="email" 
+           name="email" 
+           class="w-full p-2 border rounded" />
+        </div>
+        <div>
+          <label for="phone" class="block text-lg font-medium"
+            >Phone No.</label
+          >
+          <input 
+           type="number" 
+           id="phone" 
+           name="phone" 
+           class="w-full p-2 border rounded" />
+        </div>
+        <button type="submit" class="w-full p-2 bg-cta text-primaryText rounded hover:bg-highlight">
+          Register
+        </button>
+      </form>
+    </main>
+  </body>
+</html>

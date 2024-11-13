@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: "rgb(218, 227, 229)",
+              primaryText: "rgb(33, 33, 33)",
+              accent: "rgb(105, 170, 215)",
+              cta: "rgb(35, 150, 127)",
+              highlight: "rgb(244, 96, 54)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    
+        <header class="bg-cta text-primaryText p-4 font-bold">
+            <%- include("./partials/navbar.ejs") %>
+          </header>
+          <main class="p-6 max-w-md mx-auto">
+            <h1 class="text-2xl font-bold mb-4"><%= user.username %>'s Profile %></h1>
+            <form onsubmit="updateProfile(event)">
+                <div class="my-2">
+                  <label for="username" class="block text-lg font-medium">Username</label>
+                  <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    class="w-full p-2 border rounded"
+                    value="<%= user.username %>"
+                  />
+                </div>
+                <div class="my-2">
+                  <label for="email" class="block text-lg font-medium">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="w-full p-2 border rounded"
+                    value="<%= user.email %>"
+                  />
+                </div>
+                <div class="my-2">
+                  <label for="phone" class="block text-lg font-medium">Phone No.</label>
+                  <input
+                    type="number"
+                    id="phone"
+                    name="phone"
+                    class="w-full p-2 border rounded"
+                    value="<%= user.phone %>"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  class="w-full p-2 bg-accent text-primaryText rounded hover:bg-highlight mt-2"
+                >
+                  Update
+                </button>
+                <button
+                  type="button"
+                  class="w-full p-2 bg-red-500 text-primaryText rounded hover:bg-highlight mt-2"
+                  onclick="deleteUser()"
+                >
+                  Delete
+                </button>
+              </form>
+              
+   </body>
+  <script>
+    const updateProfile = async (event) => {
+      event.preventDefault()
+
+      const username = document.querySelector("input[name=username]").value
+      const email = document.querySelector("input[name=email]").value
+      const phone = document.querySelector("input[name=phone]").value
+
+      const res = await fetch("/users/<%= user.id %>", {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, email, phone }),
+      })
+
+      if (res.redirected) {
+        location.href = res.url
+      }
+    }
+
+    const deleteUser = async () => {
+      if (confirm("Are you sure you want to delete this user?")) {
+        const res = await fetch("/users/<%= user.id %>", {
+          method: "DELETE",
+        })
+
+        if (res.redirected) {
+          location.href = res.url
+        }
+      }
+    }
+  </script>
+</html>
