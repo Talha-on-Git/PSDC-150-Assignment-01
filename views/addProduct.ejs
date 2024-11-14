@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Product</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: "rgb(218, 227, 229)",
+              primaryText: "rgb(33, 33, 33)",
+              accent: "rgb(105, 170, 215)",
+              cta: "rgb(35, 150, 127)",
+              highlight: "rgb(244, 96, 54)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg background text-primaryText">
+    <header class="bg-cta text-primaryText p-4 font-bold">
+      <%- include("./partials/navbar.ejs") %>
+    </header>
+    <main class="p-6 max-w-md mx-auto">
+      <h1 class="text-2xl font-bold mb-4">Add Product</h1>
+      <form action="/products" method="post" class="space-y-4">
+        <div>
+          <label for="productName" class="block text-lg font-medium"
+            >Product Name</label
+          >
+          <input
+            type="text"
+            id="productName"
+            name="productName"
+            class="w-full p-2 border rounded"
+          />
+        </div>
+        <div>
+          <label for="price" class="block text-lg font-medium"
+            >Price</label
+          >
+          <input 
+           type="number" 
+           id="price" 
+           name="price" 
+           class="w-full p-2 border rounded" />
+        </div>
+        <button type="submit" class="w-full p-2 bg-cta text-primaryText rounded hover:bg-highlight">
+          Add product
+        </button>
+      </form>
+    </main>
+  </body>
+</html>
